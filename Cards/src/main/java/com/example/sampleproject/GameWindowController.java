@@ -40,7 +40,7 @@ public class GameWindowController {
         loader.setLocation(getClass().getResource("Card.fxml"));
     	Pane newPane = (Pane)loader.load();
         String[] nominal = {"6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз"};
-        String[] mask = {"бубны♦", "червы♥", "крести♣", "пики♠"};
+        String[] mask = {"Бубны♦", "Червы♥", "Крести♣", "Пики♠"};
         Random random = new Random();
         int index_1 = random.nextInt(nominal.length);
         int index_2 = random.nextInt(mask.length);

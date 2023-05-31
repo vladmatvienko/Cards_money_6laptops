@@ -39,7 +39,7 @@ public class CardController {
     	this.gameWindow = gameWindow;
     	this.cardPane = cardPane;
     	
-    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\target\\classes\\com\\example\\sampleproject\\EntrancePicture.jpg");
+    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\Cards\\target\\classes\\com\\example\\sampleproject\\EntrancePicture.jpg");
     	InputStream isImage = (InputStream) new FileInputStream(img);
     	imgBuffer = new ImageView(new Image(isImage));
     	imgBuffer.setFitWidth(100);
