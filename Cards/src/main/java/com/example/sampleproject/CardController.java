@@ -34,8 +34,6 @@ public class CardController {
    // private Text smth;
 
     public void setCardParameters(String nominal, String mask, GameWindowController gameWindow, Pane cardPane) throws FileNotFoundException {
-    	this.nominal.setText(nominal);
-    	this.mask.setText(mask);
         String PictureofCard = nominal+mask+".jpg";
     	this.gameWindow = gameWindow;
     	this.cardPane = cardPane;
@@ -52,11 +50,11 @@ public class CardController {
     	imgPane.getChildren().setAll(imgBuffer);
     	
     }
-    
+
     public String getNominal() {
     	return this.nominal.getText();
     }
-    
+
     public String getMask() {
     	return this.mask.getText();
     }

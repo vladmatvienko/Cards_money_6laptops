@@ -36,6 +36,7 @@ public class EntranceWindowController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.showAndWait();
+        stage.setTitle("Приятной игры!");
     }
 
     @FXML
