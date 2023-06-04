@@ -114,6 +114,7 @@ public class GameWindowController {
     	CardController cardController = loader.getController();
     	cardController.setCardParameters(card.getNominal(), card.getMask(), this, newPane);
     	
-    	deskAttackCardPane.add(newPane, deskAttackCardPane.getChildren().size(), 0);
+
+        deskAttackCardPane.add(newPane, deskAttackCardPane.getChildren().size(), 0);
     }
 }
