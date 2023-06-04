@@ -36,10 +36,10 @@ public class CardController {
     public void setCardParameters(String nominal, String mask, GameWindowController gameWindow, Pane cardPane) throws FileNotFoundException {
     	this.nominal.setText(nominal);
     	this.mask.setText(mask);
+        String PictureofCard = nominal+mask+".jpg";
     	this.gameWindow = gameWindow;
     	this.cardPane = cardPane;
-    	
-    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\Cards\\target\\classes\\com\\example\\sampleproject\\EntrancePicture.jpg");
+    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\Cards\\target\\classes\\com\\example\\sampleproject\\EntrancePicture.jpg");//+PictureofCard);
     	InputStream isImage = (InputStream) new FileInputStream(img);
     	imgBuffer = new ImageView(new Image(isImage));
     	imgBuffer.setFitWidth(100);
