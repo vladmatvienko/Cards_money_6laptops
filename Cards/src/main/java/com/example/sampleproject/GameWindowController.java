@@ -35,7 +35,7 @@ public class GameWindowController {
     @FXML
     private FlowPane secondPlayerPane;
 
-    public String[] MASSIVE = {"1","1","1","1","1","1","1","1","1","1","1","1"};// Массив карт которые добавляются в игру (Я не уверен, что оно работает, но мне по крайней мере одинаковые карты не попадались)
+    public String[] MASSIVE = {"2","1","1","1","1","1","1","1","1","1","1","1"};// Массив карт которые добавляются в игру (Я не уверен, что оно работает, но мне по крайней мере одинаковые карты не попадались)
     public int Num = 0;// Номер карты
     @FXML
     void addCard(ActionEvent event) throws IOException, InterruptedException {
