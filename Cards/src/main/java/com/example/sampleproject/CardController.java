@@ -40,7 +40,7 @@ public class CardController {
         this.nominal = nominal;
     	this.gameWindow = gameWindow;
     	this.cardPane = cardPane;
-    	File img = new File("C:\\Users\\glebv\\Desktop\\Cards\\target\\classes\\com\\example\\sampleproject\\"+PictureofCard);
+    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\Cards\\src\\main\\resources\\com\\example\\sampleproject\\"+PictureofCard);
     	InputStream isImage = (InputStream) new FileInputStream(img);
     	imgBuffer = new ImageView(new Image(isImage));
     	imgBuffer.setFitWidth(80);
