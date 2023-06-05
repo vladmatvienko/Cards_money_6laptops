@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
@@ -19,10 +20,10 @@ public class CardController {
 	GameWindowController gameWindow;
 
     @FXML
-    private Text nominal;
+    private String nominal;
 
     @FXML
-    private Text mask;
+    private String mask;
 
     @FXML
     private ImageView imgBuffer;
@@ -35,12 +36,14 @@ public class CardController {
 
     public void setCardParameters(String nominal, String mask, GameWindowController gameWindow, Pane cardPane) throws FileNotFoundException {
         String PictureofCard = nominal+mask+".jpg";
+        this.mask = mask;
+        this.nominal = nominal;
     	this.gameWindow = gameWindow;
     	this.cardPane = cardPane;
-    	File img = new File("C:\\Users\\vlado\\Desktop\\SampleProject\\Cards\\target\\classes\\com\\example\\sampleproject\\EntrancePicture.jpg");//+PictureofCard);
+    	File img = new File("C:\\Users\\glebv\\Desktop\\Cards\\target\\classes\\com\\example\\sampleproject\\"+PictureofCard);
     	InputStream isImage = (InputStream) new FileInputStream(img);
     	imgBuffer = new ImageView(new Image(isImage));
-    	imgBuffer.setFitWidth(100);
+    	imgBuffer.setFitWidth(80);
     	imgBuffer.setPreserveRatio(true);
     	//imgBuffer.setSmooth(true);
     	
@@ -52,18 +55,18 @@ public class CardController {
     }
 
     public String getNominal() {
-    	return this.nominal.getText();
+    	return this.nominal;
     }
 
     public String getMask() {
-    	return this.mask.getText();
+    	return this.mask;
     }
     
     @FXML
     void replaceCardToTable(MouseEvent event) throws IOException {
     	gameWindow.addCardOnTable(this);
     	cardPane.setVisible(false);
-    	//FlowPane firstPlayerPane = (FlowPane) cardPane.getParent();
-    	//firstPlayerPane.getChildren().remove(cardPane);
+    	FlowPane firstPlayerPane = (FlowPane) cardPane.getParent();
+    	firstPlayerPane.getChildren().remove(cardPane);
     }
 }

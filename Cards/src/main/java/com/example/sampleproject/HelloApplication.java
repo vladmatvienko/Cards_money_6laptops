@@ -17,6 +17,9 @@ public class HelloApplication extends Application {
         stage.setTitle("Карты, нет денег, но шесть ноутбуков");
         stage.setScene(scene);
         stage.show();
+        InputStream iconStream = getClass().getResourceAsStream("Imba.jpg");
+        Image image = new Image(iconStream);
+        stage.getIcons().add(image);
     }
     static int AmountOfCardsFirstPlayer = 0;
     public static void main(String[] args) {
