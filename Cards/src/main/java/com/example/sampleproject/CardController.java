@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
@@ -42,7 +43,7 @@ public class CardController {
     	File img = new File("C:\\Users\\glebv\\Desktop\\Cards\\target\\classes\\com\\example\\sampleproject\\"+PictureofCard);
     	InputStream isImage = (InputStream) new FileInputStream(img);
     	imgBuffer = new ImageView(new Image(isImage));
-    	imgBuffer.setFitWidth(100);
+    	imgBuffer.setFitWidth(80);
     	imgBuffer.setPreserveRatio(true);
     	//imgBuffer.setSmooth(true);
     	
@@ -65,7 +66,7 @@ public class CardController {
     void replaceCardToTable(MouseEvent event) throws IOException {
     	gameWindow.addCardOnTable(this);
     	cardPane.setVisible(false);
-    	//FlowPane firstPlayerPane = (FlowPane) cardPane.getParent();
-    	//firstPlayerPane.getChildren().remove(cardPane);
+    	FlowPane firstPlayerPane = (FlowPane) cardPane.getParent();
+    	firstPlayerPane.getChildren().remove(cardPane);
     }
 }
